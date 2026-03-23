@@ -10,6 +10,7 @@
   3. Mapear portas entre o sistema hospedeiro e o conteiner
 
 ---
+
 ## Pré-requisitos
 
 - Docker instalado e o serviço iniciado em sua máquina
@@ -17,14 +18,16 @@
 - Editor de texto (VS Code, Vim, Nano, etc.)
 
 ---
+
 ## Atividade
 
 ### Checklist
-- [ ] 1. Preparação do projeto
-  - [ ] 1.1: Fork desse repositório para sua conta pessoal
-  - [ ] 1.2: Clone do repositório github (remoto) para o computador local
-  - [ ] 1.3: Na pasta do repositório, crie a pasta `app`
-  - [ ] 1.4: Criar arquivo `app/requirements.txt`
+
+- [x] 1. Preparação do projeto
+  - [x] 1.1: Fork desse repositório para sua conta pessoal
+  - [x] 1.2: Clone do repositório github (remoto) para o computador local
+  - [x] 1.3: Na pasta do repositório, crie a pasta `app`
+  - [x] 1.4: Criar arquivo `app/requirements.txt`
 - [ ] 2. Criar a imagem docker e executar o conteiner
   - [ ] 2.1: Criar o arquivo `app/Dockerfile.dev`
   - [ ] 2.2: Construir a imagem de desenvolvimento
@@ -50,6 +53,7 @@
 #### Passo 1.1: Fork desse repositório para sua conta pessoal
 
 #### Passo 1.2: Clone do repositório github (remoto) para o computador local
+
 **Opcionalmente** pode usar o _codespaces_.
 
 #### Passo 1.3: Na pasta do repositório, crie a pasta `app`
@@ -111,6 +115,7 @@ docker run -it --rm -p 8000:8000 -v "$(pwd):/app" atividade-django-dev fish
 ```
 
 **Explicação dos parâmetros:**
+
 - `-it`: Modo interativo com terminal
 - `--rm`: Remove o container ao sair
 - `-p 8000:8000`: Mapeia a porta 8000 do container para a porta 8000 do host
@@ -118,6 +123,7 @@ docker run -it --rm -p 8000:8000 -v "$(pwd):/app" atividade-django-dev fish
 - `fish`: Inicia um terminal (shell)
 
 ### Parte 3: Criar e configurar a aplicação Django
+
 Continuando no terminal do conteiner, execute as tarefas abaixo.
 Lembre que os arquivos podem ser editados no sistema hospedeiro com a ajuda de editor de código-fonte, tipo o vs code.
 
@@ -185,6 +191,7 @@ python3 manage.py createsuperuser
 ```
 
 Quando solicitado, preencha:
+
 - **Username**: admin
 - **Email**: (pode deixar em branco ou colocar um email qualquer)
 - **Password**: 321
@@ -243,10 +250,12 @@ python3 manage.py runserver 0.0.0.0:8000
 #### Passo 4.2: Testar a aplicação
 
 Abra o navegador no sistema hospedeiro e acesse:
+
 - **Página inicial**: http://localhost:8000
 - **Admin**: http://localhost:8000/admin (use username: admin, password: 321)
 
 ### Parte final: relatório
+
 1. Criar um arquivo no `relatorio.md`.
 2. Coloque título e identificação (nome completo) com H1
 3. Colocar 3 seções principais com H2: introdução, relato das atividades, e considerações finais.
@@ -255,6 +264,7 @@ Abra o navegador no sistema hospedeiro e acesse:
 6. Por fim, em considerações finais, é um espaço para colocar aprendizado, dificuldades e sugestões.
 
 **Importante** Documente todo o processo realizado, incluindo:
+
 - O relatório é texto em primeira pessoa, redigito como redação.
 - Screenshots das páginas funcionando (home e admin)
 - Screenshots das saídas da execução dos comandos no terminal
